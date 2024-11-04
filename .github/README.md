@@ -33,21 +33,21 @@ A production-ready Telegram bot template built with aiogram 3.x, featuring Postg
 ## Project Structure
 
 ```
-├── alembic.ini                  # Alembic configuration
-├── bot.py                       # Main bot file
-├── docker-compose.yml          # Docker services configuration
-├── Dockerfile                  # Bot image configuration
-├── migrations/                 # Database migrations
-├── nginx/                     # Nginx configuration
-└── tgbot/                    # Main bot package
-    ├── config.py            # Configuration management
-    ├── database/           # Database models and ORM
-    ├── filters/           # Custom aiogram filters
-    ├── handlers/         # Message handlers
+├── alembic.ini          # Alembic configuration
+├── bot.py               # Main bot file
+├── docker-compose.yml   # Docker services configuration
+├── Dockerfile           # Bot image configuration
+├── migrations/          # Database migrations
+├── nginx/               # Nginx configuration
+└── tgbot/               # Main bot package
+    ├── config.py        # Configuration management
+    ├── database/        # Database models and ORM
+    ├── filters/         # Custom aiogram filters
+    ├── handlers/        # Message handlers
     ├── keyboards/       # Keyboard layouts
-    ├── middlewares/    # Middleware components
-    ├── misc/          # Additional utilities
-    └── services/      # Business logic services
+    ├── middlewares/     # Middleware components
+    ├── misc/            # Additional utilities
+    └── services/        # Business logic services
 ```
 
 ## Installation
@@ -116,9 +116,9 @@ The bot uses a typed configuration system with dataclasses:
 @dataclass
 class Config:
     tg_bot: TgBot         # Bot token and admin IDs
-    postgres: Postgres     # Database configuration
+    postgres: Postgres    # Database configuration
     redis: Redis          # Redis configuration
-    misc: Misc           # Additional settings
+    misc: Misc            # Additional settings
 ```
 
 Configuration is loaded from environment variables with strong typing and validation.
